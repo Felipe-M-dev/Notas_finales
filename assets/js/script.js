@@ -1,5 +1,5 @@
 /* Input student name and grade */
-let student__name = prompt('Nombre', 'Escriba su nombre');
+let student__name = prompt('Nombre', 'Felipe Martinez');
 let grade = prompt(`Carrera`, `${student__name}, indique su carrera`);
 
 /* Input course and scores */
@@ -42,7 +42,7 @@ alert(`Sabemos que no tiene la tercera nota en ${course__3}\nNo se preocupe, nos
 /* Header opening */
 document.write(`
     <header class="container">
-    <h1 class="my-4">Notas finales</h1>
+    <p class="fw-bold d-inline-block">Notas finales</p><img src="assets/img/logo.png" alt="Logo Desafio Latam">
 `);
 
 /* Score table */
