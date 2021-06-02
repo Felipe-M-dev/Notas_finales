@@ -1,20 +1,21 @@
 /* Input student name and grade */
-let student__name = prompt('Nombre', 'Felipe Martinez');
-let grade = prompt(`Carrera`, `${student__name}, indique su carrera`);
+let student__name = prompt('Nombre\nEj: Felipe', 'Felipe');
+let student__lastname = prompt('Apellido\nEj: Martinez', 'Martinez');
+let grade = prompt(`Carrera\nEj: Desarrollo Fullstack`, `Desarrollo Fullstack`);
 
 /* Input course and scores */
-let course__1 = prompt('Ingrese el primer ramo\nEj: HTML', 'Ramo 1');
-let course__1__score1 = prompt(`Primera nota en ${course__1}\nEj: 7.0`, '0');
-let course__1__score2 = prompt(`Segunda nota en ${course__1}\nEj: 7.0`, '0');
-let course__1__score3 = prompt(`Tercera nota en ${course__1}\nEj: 7.0`, '0');
-let course__2 = prompt('Ahora ingrese el segundo ramo\nEj: CSS', 'Ramo 2');
-let course__2__score1 = prompt(`Primera nota en ${course__2}\nEj: 7.0`, '0');
-let course__2__score2 = prompt(`Segunda nota en ${course__2}\nEj: 7.0`, '0');
-let course__2__score3 = prompt(`Tercera nota en ${course__2}\nEj: 7.0`, '0');
-let course__3 = prompt('Finalmente, ingrese el tercer ramo\nEj: JavaScript', 'Ramo 3');
-let course__3__score1 = prompt(`Primera nota en ${course__3}\nEj: 7.0`, '0');
-let course__3__score2 = prompt(`Segunda nota en ${course__3}\nEj: 7.0`, '0');
-let approve__score = prompt('¿Cuál es su nota mínima de aprobación?\nEj: 4', 'Nota de aprobación');
+let course__1 = prompt('Ingrese el primer ramo\nEj: HTML', 'HTML');
+let course__1__score1 = prompt(`Ingrese nota 1 en ${course__1}\nEj: 7.0`, '7');
+let course__1__score2 = prompt(`Ingrese nota 2 en ${course__1}\nEj: 7.0`, '7');
+let course__1__score3 = prompt(`Ingrese nota 3 en ${course__1}\nEj: 7.0`, '7');
+let course__2 = prompt('Ahora ingrese el segundo ramo\nEj: CSS', 'CSS');
+let course__2__score1 = prompt(`Ingrese nota 1 en ${course__2}\nEj: 7.0`, '7');
+let course__2__score2 = prompt(`Ingrese nota 2 en ${course__2}\nEj: 7.0`, '7');
+let course__2__score3 = prompt(`Ingrese nota 3 en ${course__2}\nEj: 7.0`, '7');
+let course__3 = prompt('Finalmente, ingrese el tercer ramo\nEj: JavaScript', 'JavaSript');
+let course__3__score1 = prompt(`Ingrese nota 1 en ${course__3}\nEj: 7.0`, '7');
+let course__3__score2 = prompt(`Ingrese nota 2 en ${course__3}\nEj: 7.0`, '7');
+let approve__score = prompt('¿Cuál es la nota mínima para aprobar?\nEj: 4', '4');
 
 /* trasform string to int type */
 course__1__score1 = parseInt(course__1__score1);
@@ -34,16 +35,11 @@ course_1_avr = Math.round(course_1_avr * 10) / 10;
 let course_2_avr = (course__2__score1 + course__2__score2 + course__2__score3) / 3;
 course_2_avr = Math.round(course_2_avr * 10) / 10;
 
-/* New step to user */
-alert(`Sabemos que no tiene la tercera nota en ${course__3}\nNo se preocupe, nosotros le ayudaremos...`);
-
 /* Web Page */
 
 /* Header opening */
 document.write(`
-    <header class="container">
-    <p class="fw-bold d-inline-block">Notas finales</p><img src="assets/img/logo.png" alt="Logo Desafio Latam">
-`);
+<div class='conteiner row'><div class='col-6'><h1>Notas Finales</h1></div><img src='assets/img/logo.png' class='col-6 ml-5' style='height: 3rem; width: 7.875rem; padding: 0; margin-left:37.75rem'>`);
 
 /* Score table */
 document.write(`
@@ -52,7 +48,7 @@ document.write(`
             <tbody>
                 <tr>
                     <th scope="row">Nombre: </th>
-                    <td>${student__name}</td>
+                    <td>${student__name} ${student__lastname}</td>
                 </tr>
                 <tr>
                     <th scope="row">Carrera: </th>
